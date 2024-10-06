@@ -1,0 +1,9 @@
+﻿@model List<Lab2MVC.Models.Reservation>
+
+<h1>Reservationer</h1>
+<ul>
+    @foreach (var reservation in Model)
+    {
+        <li>Bord @reservation.TableId - Antal gäster: @reservation.NumberOfGuests, Datum: @reservation.ReservationDate</li>
+    }
+</ul>

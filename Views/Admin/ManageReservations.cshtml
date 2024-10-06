@@ -1,0 +1,31 @@
+﻿<h2>Hantera Bokningar</h2>
+
+<a href="/Admin/AddReservation" class="btn btn-primary mb-3">Lägg till ny bokning</a>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Boknings-ID</th>
+            <th>Kund-ID</th>
+            <th>Bord</th>
+            <th>Datum</th>
+            <th>Antal gäster</th>
+            <th>Redigera</th>
+            <th>Radera</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var reservation in Model)
+        {
+            <tr>
+                <td>@reservation.ReservationId</td>
+                <td>@reservation.CustomerId</td>
+                <td>@reservation.TableId</td>
+                <td>@reservation.ReservationDate</td>
+                <td>@reservation.NumberOfGuests</td>
+                <td><a href="/Admin/EditReservation/@reservation.ReservationId" class="btn btn-warning">Redigera</a></td>
+                <td><a href="/Admin/DeleteReservation/@reservation.ReservationId" class="btn btn-danger">Radera</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

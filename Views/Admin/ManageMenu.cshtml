@@ -1,0 +1,40 @@
+﻿@model List<Lab2MVC.Models.MenuItem>
+
+<h1>Hantera Menyn</h1>
+
+<a asp-action="AddMenuItem" class="btn btn-primary">Lägg till nytt menyalternativ</a>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Namn</th>
+            <th>Pris</th>
+            <th>Beskrivning</th>
+            <th>Tillgänglig</th>
+            <th>Redigera</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Price kr</td>
+                <td>@item.Description</td>
+                <td>
+                    @if (item.IsAvailable)
+                    {
+                        <span>Tillgänglig</span>
+                    }
+                    else
+                    {
+                        <span>Ej tillgänglig</span>
+                    }
+                </td>
+                <td>
+                    <a asp-action="EditMenuItem" asp-route-id="@item.MenuItemId" class="btn btn-warning">Redigera</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

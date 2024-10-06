@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Vår Restaurang</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/custom.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-light-beige text-dark-brown min-h-screen flex flex-col">
+    <header class="bg-dark-brown p-4 text-center">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="/" class="text-light-brown text-3xl font-bold">Vår Restaurang</a>
+            <ul class="flex space-x-4">
+                <li><a href="/" class="hover:text-light-brown">Home</a></li>
+                <li><a href="/Menu" class="hover:text-light-brown">Meny</a></li>
+                <li><a href="/Account/Login" class="hover:text-light-brown">Logga in som Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container flex-grow mt-4">
+        @RenderBody()
+    </div>
+
+    <!-- Footer (endast en instans) -->
+    <footer class="bg-dark-brown p-6 text-center mt-auto">
+        <p>&copy; 2024 Vår Restaurang. Alla rättigheter förbehållna.</p>
+        <a href="/Home/Privacy" class="text-light-brown hover:underline">Privacy Policy</a>
+    </footer>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

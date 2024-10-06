@@ -1,0 +1,267 @@
+﻿/* Allmänna stil för hela sidan */
+body {
+    background-color: #f5e6cc; 
+    font-family: 'Georgia', serif; 
+    color: #3e2723; 
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Rubriker */
+h1, h2, h3 {
+    font-family: 'Georgia', serif; 
+    color: #4e342e; /* Djupare brun för rubriker */
+    font-size: 3em;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+    h1:hover, h2:hover, h3:hover {
+        color: #6d4c41; /* Ljusare brun på hover */
+    }
+
+/* Design av listor (meny och bokningar) */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 50px;
+}
+
+li {
+    font-family: 'Georgia', serif; 
+    font-size: 1.5em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    background-color: transparent; 
+    padding: 15px 20px;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+    margin: 20px auto;
+    max-width: 600px; 
+}
+
+    li:hover {
+        color: #795548; 
+    }
+
+/* Länkar och knappar */
+a {
+    font-family: 'Georgia', serif; 
+    color: #4e342e; /* Mörkare brun */
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+    a:hover {
+        background-color: #8d6e63; /* Ljusare bakgrund på hover */
+        color: #ffffff;
+    }
+
+    /* Knappar */
+    button, a.button {
+        background-color: #6d4c41; /* Mörkare brun för bättre synlighet */
+        color: #ffffff;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 30px; 
+        font-size: 1.2em;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: background-color 0.5s ease-in-out;
+    }
+
+        button:hover, a.button:hover {
+            background-color: #8d6e63; 
+        }
+
+/* Design för header */
+header {
+    background-color: #d2b48c; 
+    padding: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+}
+
+.navbar-brand {
+    font-size: 2em;
+    color: #3e2723; 
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center; 
+    gap: 20px; /* mellanrum mellan menyvalen */
+}
+
+    .navbar-nav .nav-link {
+        font-family: 'Georgia', serif; 
+        color: #3e2723; 
+        font-size: 1.3em;
+        transition: color 0.3s ease-in-out;
+    }
+
+        .navbar-nav .nav-link:hover {
+            color: #6d4c41; /* Ljusare brun på hover */
+        }
+
+/* Footer design */
+footer {
+    background-color: #d2b48c; 
+    color: #3e2723; 
+    padding: 30px 0;
+    font-size: 1em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+    footer a {
+        color: #3e2723; 
+        text-decoration: none;
+    }
+
+        footer a:hover {
+            color: #4e342e; 
+        }
+
+/* Admin login form design */
+.admin-login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    padding: 20px;
+    background-color: #f5e6cc; 
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Mjuk skugga */
+    border-radius: 12px; /* Rundade kanter */
+    max-width: 400px;
+    margin: 0 auto 40px auto; /* 40px distans till footern */
+}
+
+    .admin-login-container h1 {
+        font-size: 2.5em;
+        color: #4e342e; 
+        margin-bottom: 20px;
+    }
+
+    .admin-login-container label {
+        font-size: 1.2em;
+        margin-bottom: 8px;
+        color: #3e2723; 
+    }
+
+    .admin-login-container input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 1.1em;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+        .admin-login-container input:focus {
+            border-color: #6d4c41; 
+            outline: none;
+            box-shadow: 0 0 5px rgba(109, 76, 65, 0.5);
+        }
+
+    .admin-login-container button {
+        background-color: #6d4c41; 
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 30px; 
+        font-size: 1.2em;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        width: 100%; /* Fyller hela bredden */
+    }
+
+        .admin-login-container button:hover {
+            background-color: #8d6e63; 
+        }
+
+.error-message {
+    color: #e57373; /* Röd text för felmeddelanden */
+    margin-top: 10px;
+}
+
+/* Populära rätter */
+.popular-dishes {
+    display: flex;
+    justify-content: center; 
+    gap: 30px; /* Mellanrum mellan rätterna */
+    padding: 20px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+    .popular-dishes li {
+        font-family: 'Georgia', serif; 
+        font-size: 1.5em;
+        line-height: 1.8;
+        padding: 15px 20px;
+        background-color: transparent; /* Ingen bakgrundsfärg */
+        border-radius: 12px;
+        width: 250px; 
+        text-align: center;
+        transition: all 0.3s ease-in-out;
+        margin-top: 20px; 
+    }
+
+        .popular-dishes li:hover {
+            color: #795548; 
+        }
+
+/* Justering för Administratörsgränssnittet */
+.admin-interface h1 {
+    margin-bottom: 60px; /* större mellanrum mellan rubriken och alternativen */
+}
+
+.admin-interface a {
+    display: block;
+    margin-bottom: 20px; /* Skapa distans mellan alternativen */
+    padding: 10px 15px;
+    background-color: transparent;
+    border: 1px solid transparent;
+}
+
+    .admin-interface a:hover {
+        background-color: #8d6e63;
+        color: #ffffff;
+        border-radius: 8px;
+    }
+
+/* Responsiv design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2em;
+    }
+
+    li, button {
+        font-size: 1.2em;
+        padding: 10px;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1em;
+    }
+
+    /* Populära rätter responsiv anpassning */
+    .popular-dishes {
+        flex-direction: column; 
+        gap: 20px;
+    }
+}

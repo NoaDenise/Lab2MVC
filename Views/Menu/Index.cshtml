@@ -1,0 +1,12 @@
+﻿@model List<Lab2MVC.Models.MenuItem>
+
+<h1>Vår Meny</h1>
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>
+            <strong>@item.Name</strong> - @item.Price kr<br />
+            <i>@item.Description</i> <!-- Här visas beskrivningen -->
+        </li>
+    }
+</ul>
